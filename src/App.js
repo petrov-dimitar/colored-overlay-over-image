@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+/** @format */
+
+import "./App.css";
+import image from "./image_bg.jpg";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // Wrapper Section
+    <section className="w-full h-[500px] relative ">
+      {/* Independent overlay div with gradient bg color taking the whole height and width */}
+      {/* CustomGradientOverlay comes from index.css */}
+      <div className="customGradientOverlay absolute w-full h-full z-[99]"></div>
+
+      {/* Image taking 2/3 of width.. Might be better to make it an absolute width?*/}
+      <img className="h-full w-2/3" src={image}></img>
+
+      {/* Text Container on top of section positioned absolute to section parent */}
+      <div className="absolute left-[65%] bottom-[40%]  z-[100]">
+        <div className=" w-full h-full text-center">
+          <h1 className="text-[#ffffff] text-3xl">Some Interesting Tile</h1>
+          <p>Some Interesting text</p>
+        </div>
+      </div>
+    </section>
   );
 }
 

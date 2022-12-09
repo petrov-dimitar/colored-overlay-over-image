@@ -1,7 +1,7 @@
 /** @format */
 
 import "./App.css";
-import image from "./image_bg.jpg";
+import image from "./b3.png";
 
 function App() {
   return (
